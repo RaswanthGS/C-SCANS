@@ -1,0 +1,112 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav2">
+      <a class="navbar-brand" href="{% url 'main' %}" style="color:white; font-size: xx-large;">
+        <img class="navbar-brand" src="/static/images/cscans.jpg" width="35px" style="margin-bottom: 2%;"><b>C Scans</b>
+      </a> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu" style="margin-left: 40%;">
+        <ul class="navbar-nav mr-auto" style="margin-left: 35%;">
+          <li class="nav-item active">
+            <a class="nav-link active" href="{% url 'main' %}" style="color:white;"><b>Home </b><span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<div style="margin-top: 5%;">      
+    <section class="mb-4">  
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Book An Appoinment</h2>
+
+    <div class="row" style="margin-left: 25%; margin-right: 10%;">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="appoinment" name="appoinment" action="" method="POST">
+                {% csrf_token %}
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name1" name="name" class="form-control" required>
+                            <label for="name" class="">Your Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email1" name="email" class="form-control" required>
+                            <label for="email" class="">Your Email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="mobile1" name="mobile" class="form-control" required>
+                            <label for="mobile" class="">Your Contact Number</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="report1" name="report" class="form-control">
+                            <label for="report" class="">Scan Name</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message1" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <button type="submit" class="btn btn-primary" onclick="gotowhatsapp()">Book Through WhatsApp</button>
+            </div>
+            
+        </div>
+        <!--Grid column-->
+
+    </div>
+    </section>
+
+</div>
+<script>
+    function gotowhatsapp() {
+        
+        var name = document.getElementById("name1").value;
+        var email = document.getElementById("email1").value;
+        var phone = document.getElementById("mobile1").value;
+        var report = document.getElementById("report1").value;
+        var message = document.getElementById("message1").value;
+    
+        var url = "https://wa.me/919965656455?text=" 
+        + "Name: " + name + "%0a"
+        + "Email: " + email + "%0a"
+        + "Phone: " + phone + "%0a"
+        + "Report: " + report  + "%0a"
+        + "Message: " + message; 
+    
+        window.open(url, '_blank').focus();
+    }
+</script>
+{% endblock content %}

@@ -1,0 +1,90 @@
+@media (max-width: 600px) {
+    .carousel-css{
+        margin-top: 2%;
+        margin-left: 9%;
+        margin-right: 9%;
+        
+    }
+    .uses{
+        text-align: center; margin-top: 3%; margin-left: 4%; margin-right: 4%; box-shadow: 0px 6px 5px 2px rgb(209, 209, 209);
+    }
+    .row{
+        text-align: center; margin: auto;padding-left: 10%; padding-right: 20%;
+    }
+    .location1{
+        font-size: 60px;
+    }
+    .button{
+        text-align: center;
+        border: 3px solid rgb(233, 58, 0);
+        background-color: white;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+@media (min-width: 600px) {
+    .carousel-css{
+        margin-left: 25%; margin-right: 25%;padding-top: 2%;padding-bottom: 4%;
+    }
+    .uses{
+        text-align: center; margin-top: 3%; margin-left: 22%; margin-right: 22%; box-shadow: 0px 6px 5px 2px rgb(209, 209, 209);
+    }
+    .row{
+        text-align: center; margin: auto;padding-left: 30%; padding-right: 30%;
+    }
+    .location1{
+        font-size: 80px;
+    }
+    .button{
+        text-align: center;
+        border: 3px solid rgb(233, 58, 0);
+        background-color: white;
+        margin-left: 28%;
+        margin-right: 28%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+header{
+    background-color: rgb(233, 58, 0);
+}
+body{
+    background-color: rgb(201, 201, 201);
+    background-image: url('/static/images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav{
+    margin-left: 15%;
+}
+.nav-content{
+    display: flex;
+    margin-left: 40%;
+}
+.details{
+    background-color: white;
+    border:1px solid rgb(131, 131, 131) ;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.about{
+    background-color: white;
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.contact-us{
+    margin-top: 4%;
+}
+img{
+    object-fit:cover;
+    object-position:center;
+}
