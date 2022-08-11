@@ -21,16 +21,16 @@
     <section class="mb-4">  
     <h2 class="h1-responsive font-weight-bold text-center my-4">Book An Appoinment</h2>
 
-    <div class="row" style="margin-left: 25%; margin-right: 10%;">
+    <div class="row" style="margin-left: 10%; margin-right: 10%;">
 
         <!--Grid column-->
-        <div class="col-md-9 mb-md-0 mb-5">
+        <div >
             <form id="appoinment" name="appoinment" action="" method="POST">
                 {% csrf_token %}
                 <!--Grid row-->
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="md-form mb-0">
+                        <div class="md-form mb-0" style="width: 200px;">
                             <input type="text" id="name1" name="name" class="form-control" required>
                             <label for="name" class="">Your Name</label>
                         </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="md-form mb-0">
+                        <div class="md-form mb-0" style="width: 200px;">
                             <input type="text" id="email1" name="email" class="form-control" required>
                             <label for="email" class="">Your Email</label>
                         </div>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="md-form mb-0">
+                        <div class="md-form mb-0" style="width: 200px;">
                             <input type="text" id="mobile1" name="mobile" class="form-control" required>
                             <label for="mobile" class="">Your Contact Number</label>
                         </div>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="md-form mb-0">
+                        <div class="md-form mb-0" style="width: 200px;">
                             <input type="text" id="report1" name="report" class="form-control">
                             <label for="report" class="">Scan Name</label>
                         </div>
@@ -68,7 +68,7 @@
                     <!--Grid column-->
                     <div class="col-md-12">
 
-                        <div class="md-form">
+                        <div class="md-form" style="width: 200px;">
                             <textarea type="text" id="message1" name="message" rows="2" class="form-control md-textarea"></textarea>
                             <label for="message">Your message</label>
                         </div>
